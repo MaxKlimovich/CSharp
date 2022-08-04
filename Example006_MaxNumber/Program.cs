@@ -1,10 +1,7 @@
-﻿int a = 1;
-int b = 2;
-int c = 3;
-int d = 8;
-int e = 4;
+﻿int a = 1, b = 2, c = 3, d = 4, e = 6;
 
-int max = a;
+
+ max = a;
 
 if (a > max) a = max;
 if (b > max) b = max;

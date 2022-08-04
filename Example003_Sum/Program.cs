@@ -1,4 +1,5 @@
-﻿int num1 = 24124;
-int num2 = 214124;
+﻿int num1 = new Random().Next(1, 10);
+int num2 = new Random().Next(1, 10);
 int result = num1 + num2;
-Console.WriteLine($"{num1} + {num2} = {result}");
+Console.Write($"{num1} + {num2} = {result}");
+

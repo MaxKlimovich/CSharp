@@ -1,16 +1,16 @@
 ﻿int a = 1;
-int b = 2;
+int b = 42;
 int c = 3;
 int d = 8;
 int e = 4;
 
 int max = a;
 
-if (a > max) a = max;
-if (b > max) b = max;
-if (c > max) c = max;
-if (d > max) d = max;
-if (e > max) e = max;
+if (a > max)  max = a;
+if (b > max)  max = b;
+if (c > max)  max = c;
+if (d > max)  max = d;
+if (e > max)  max = e;
 
 Console.Write("max = ");
 

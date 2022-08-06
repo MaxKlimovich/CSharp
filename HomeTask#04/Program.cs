@@ -1,4 +1,4 @@
-﻿double a = 2, b = 3, c = 7;
+﻿double a = 2, b = 20, c = 7;
 
 
 

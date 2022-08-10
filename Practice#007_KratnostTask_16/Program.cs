@@ -12,9 +12,9 @@ int firstNum = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите второе число");
 int secondNum = Convert.ToInt32(Console.ReadLine());
 
-bool CheckNum (int number1, int number2)
+bool CheckNum(int number1, int number2)
 {
-    return  number1 * number1 == number2 || number2 % number2 == number1;
+    return number1 * number1 == number2 || number2 % number2 == number1;
 }
 
 bool result = CheckNum(firstNum, secondNum);

@@ -15,5 +15,7 @@ int xb = Convert.ToInt32(Console.ReadLine());
 Console.Write("yb: ");
 int yb = Convert.ToInt32(Console.ReadLine());
 
-double line = Math.Sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya));
+// double line = Math.Sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya));
+double line = Math.Sqrt(Math.Pow((xb - xa),2) + Math.Pow((yb - ya), 2));
 Console.WriteLine($"Расстояние между точками = {line}.");
+

@@ -4,29 +4,22 @@
 // 23432 → да
 // 12821 → да
 
-// Если ((число / 10000) == (число % 10) && (число / 1000) == (число % 100)), то это полиндром.
-// Иначе, нет.
 
 Console.WriteLine("Введите пятизначное число ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 
+// if (num > 99999 || num < 10000);
+// Console.WriteLine("Не корректно введено значение");
 
-if ((num / 10000) == (num % 10) && (num / 1000) == (num % 100))
+if ((num / 10000) == (num % 10) && ((num / 1000) % 10) == ((num % 100) / 10))
+
     Console.WriteLine($"{num} -> да");
+
 else
+
     Console.WriteLine($"{num} -> нет");
 
 Console.ReadLine();
 
-// int Pol(int num)
-// {
-//     if ((num / 10000) == (num % 10) && (num / 1000) == (num % 100))
-//     Console.WriteLine($"{num} -> да");
-// else
-//     Console.WriteLine($"{num} -> нет");
-// }
 
-// int pol = Pol(num); 
-// string result = pol ($"{num > 99999 || num < 9999}") ? pol.ToString() : "не является корректным числом";
-// Console.WriteLine($" {num} => ");

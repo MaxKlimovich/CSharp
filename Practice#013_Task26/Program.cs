@@ -48,7 +48,7 @@ int CountNumbers(int num)
     return counter;
 }
 int res = CountNumbers(number);
-Console.WriteLine($"Получим количество цифр из {number} = {res}");
+Console.WriteLine($"Количество цифр в числе {number} = {res}");
 
 
 

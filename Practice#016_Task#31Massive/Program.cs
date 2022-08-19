@@ -31,10 +31,18 @@ int[] GetSumPosNegElem(int[] array)
     {
         if (array[i] < 0)
             sumNeg += array[i];
-        else 
+        else
             sumPos += array[i];
     }
     return new int[] { sumNeg, sumPos };
+
+    // int[] arr = new int[] { sumNeg, sumPos};
+    // return arr;
+
+    // int[] array = new int[2];
+    // arr[0] = sumNe;
+    // arr[1] = sumPos;
+    // return arr;
 }
 
 void PrintArr(int[] array)

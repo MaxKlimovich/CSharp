@@ -27,7 +27,7 @@ int[] EspandiArr(int[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = array[i] * -1;
+        array[i] = -array[i];
     }
     return array;
 }

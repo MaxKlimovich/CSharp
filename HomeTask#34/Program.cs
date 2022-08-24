@@ -58,7 +58,7 @@ PrintArr(array);
 int newArray = CalcArr(array);
 
 
-Console.WriteLine($" -> ${newArray} ");
+Console.WriteLine($" -> {newArray} ");
 
 
 

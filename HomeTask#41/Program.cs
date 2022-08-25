@@ -14,4 +14,4 @@ for (int i = 0; i < arr.Length; i++)
     if (arr[i] > 0) count ++;
 }
 
-Console.WriteLine($"Количество чисел больше 0 является {count} чисел");
+Console.WriteLine($"Количество чисел больше 0 равно {count} ");

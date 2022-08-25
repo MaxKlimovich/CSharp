@@ -8,21 +8,40 @@
 // 2 -> 10
 
 
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int DecimToBinary(int num)
+// int DecimToBinary(int num)
+// {
+//     int result = 0;
+//     int factor = 1;
+
+//     while (num > 0)
+//     {
+//         result += num % 2*factor;
+//         num /= 2;
+//         factor *= 10;
+//     }
+//     return result;
+// }
+// int res = DecimToBinary(number);
+// Console.WriteLine($"{number} -> {res}");
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! С помощью рекурскии !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+int num = 13;
+
+void DecToBin(int n)
 {
-    int result = 0;
-    int factor = 1;
-
-    while (num > 0)
-    {
-        result += num % 2*factor;
-        num /= 2;
-        factor *= 10;
-    }
-    return result;
+    if (n == 0) return;
+    DecToBin(n / 2);
+    Console.Write(n % 2);
 }
-int res = DecimToBinary(number);
-Console.WriteLine($"{number} -> {res}");
+
+DecToBin(num);
+

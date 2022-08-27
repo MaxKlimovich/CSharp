@@ -75,7 +75,7 @@ int SumElementTernar(int[,] matrix)
     return sum;
 }
 
-int[,] doublMass = CreateMatrixRndInt(7, 4, 1, 10);
+int[,] doublMass = CreateMatrixRndInt(4, 4, 1, 10);
 PrintMatrix(doublMass);
 Console.WriteLine();
 int res = SumElementTernar(doublMass);

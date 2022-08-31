@@ -21,23 +21,20 @@ int[,] CreateMatrixRndInt(int row, int col, int min, int max)
         for (int j = 0; j < col; j++)
         {
             matrix[i, j] = rnd.Next(min, max + 1);
-
         }
     }
     return matrix;
 }
 
-void PrintElem(int[,] array)
-{
 
-    for (int i = 1; i < array.GetLength(0); i++)
+void PrintElem(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[");
-        for (int j = 1; j < array.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-
-            if (j < array.GetLength(0)) Console.Write($"{array[i, j],4}");
-            else Console.Write($"{array[i, j],4}");
+            Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine("]");
     }
@@ -52,23 +49,22 @@ bool ExistElem(int[,] array, int a1, int b1)
 
 
 
-Console.WriteLine("Введите координаты строк a: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты столбиков b: ");
-int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите кол-во строк : ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите кол-во столбцов : ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] OurMatrix = CreateMatrixRndInt(m, n, 0, 10);
+PrintElem(OurMatrix);
 
-int[,] twoDArray = CreateMatrixRndInt(5, 5, 10, 99);
-PrintElem(twoDArray);
-Console.WriteLine();
-bool res = ExistElem(twoDArray, a, b);
-Console.WriteLine(twoDArray[a, b]);
-
-
-if (a >= 0 && b < twoDArray.GetLength(0) && b >= 0 && a < twoDArray.GetLength(1))
+Console.Write("Введите индекс столбца : ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите индекс строки : ");
+int m1 = Convert.ToInt32(Console.ReadLine());
+if (m1 >= 0 && m1 < OurMatrix.GetLength(0) && n1 >= 0 && n1 < OurMatrix.GetLength(1))
 {
-    Console.WriteLine($"Элемент массива ({a}, {b}) : {twoDArray[a, b]}");
+    Console.WriteLine($"Элемент массива ({n1}, {m1}) : {OurMatrix[m1, n1]}");
 }
-else { Console.WriteLine($"Элемент массива ({a}, {b}) в заданном массиве отсутствует."); }
+else { Console.WriteLine($"Элемент массива ({n1}, {m1}) в заданном массиве отсутствует."); }
 
 
 
